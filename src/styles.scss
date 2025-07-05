@@ -90,3 +90,33 @@ h1 {
     line-height: 24px;
   }
 }
+
+.btn {
+  padding: 12px 17px;
+  height: 48px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.btn-primary {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white) !important;
+  }
+
+  &.btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text-medium);
+
+    &:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+  }
+}
