@@ -2,3 +2,9 @@
   gap: 13px;
   margin-top: 16px;
 }
+
+@media screen and (max-width: 992px) {
+  .nav-bar {
+    gap: 8px;
+  }
+}

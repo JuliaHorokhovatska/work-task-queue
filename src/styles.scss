@@ -35,6 +35,10 @@ body {
     flex-direction: row;
   }
 
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+
   &.flex-row-lg {
     @media (min-width: 992px) {
       flex-direction: row;
@@ -91,10 +95,14 @@ h1 {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 .btn {
   padding: 12px 17px;
   height: 48px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   font-weight: 500;
   border: 1px solid transparent;
@@ -103,20 +111,34 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &.btn-primary {
-    border: 1px solid var(--primary);
-    background-color: var(--primary);
-    color: var(--white) !important;
-  }
+  gap: 12px;
 
   &.btn-outline {
     border: 1px solid var(--border);
     color: var(--text-medium);
+    background-color: var(--dark);
+
+    .btn-icon {
+      color: var(--primary);
+    }
 
     &:hover {
       border-color: var(--primary);
       color: var(--primary);
+    }
+  }
+
+  &.btn-primary {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+
+    .btn-icon {
+      color: var(--white);
+    }
+
+    &:hover {
+      color: var(--white);
     }
   }
 }
