@@ -1,3 +1,2 @@
-<div class="search">
-  <input type="text" placeholder="Search" [formControl]="search">
-</div>
+<input [ngStyle]="{'height.px': height(), 'width.px': width()}" class="search-input text-light" type="text"
+  placeholder="Search" [formControl]="search">

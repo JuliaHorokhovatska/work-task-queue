@@ -1,4 +1,20 @@
 .header {
   border-bottom: 1px solid var(--border);
   padding: 22px 0;
+
+  @media screen and (max-width: 992px) {
+    padding: 15px 0;
+  }
+}
+
+.user-label {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  border-radius: 50%;
+  margin-left: 11px;
+  background: linear-gradient(to right,
+      rgba(30, 64, 175, 0.3) 0%,
+      rgba(30, 64, 175, 1) 100%);
 }
