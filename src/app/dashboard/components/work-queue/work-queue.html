@@ -1,0 +1,30 @@
+@if ({
+  workQueueTableColumns: workQueueTableColumns$ | async,
+}; as extracted) {
+  <div class="card-container">
+    <h2 class="card-title">Work Queue</h2>
+    <div class="d-flex gap-1 align-items-center flex-wrap btn-container">
+      <button class="btn btn-tab" [class.active]="workStatusTab() === ''" (click)="setActiveTab('')" type="button">
+        Assigned to me
+        ({{ workQueueTableDetails()?.length }})
+      </button>
+      <button class="btn btn-tab" [class.active]="workStatusTab() === workStatus.new"
+        (click)="setActiveTab(workStatus.new)" type="button">
+        New
+        ({{ workQueueTableDetailsByStatus()?.[workStatus.new]?.length }})
+      </button>
+      <button class="btn btn-tab" [class.active]="workStatusTab() === workStatus.pending"
+        (click)="setActiveTab(workStatus.pending)" type="button">
+        Pending Review
+        ({{ workQueueTableDetailsByStatus()?.[workStatus.pending]?.length }})
+      </button>
+      <button class="btn btn-tab" [class.active]="workStatusTab() === workStatus.completed"
+        (click)="setActiveTab(workStatus.completed)" type="button">
+        Completed
+        ({{ workQueueTableDetailsByStatus()?.[workStatus.completed]?.length }})
+      </button>
+    </div>
+    <app-table [displayedColumns]="extracted.workQueueTableColumns ?? []" [dataSourceDetails]="workQueueTableSource()"
+      [showFilter]="false" />
+  </div>
+}

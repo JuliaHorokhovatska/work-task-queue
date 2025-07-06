@@ -1,0 +1,55 @@
+.table-container {
+  overflow: auto;
+}
+
+.user-label {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  border-radius: 50%;
+}
+
+.status-point {
+  width: 10px;
+  min-width: 10px;
+  height: 10px;
+  min-height: 10px;
+  border-radius: 50%;
+
+  &.primary {
+    background-color: var(--primary);
+  }
+
+  &.danger {
+    background-color: var(--danger);
+  }
+
+  &.success {
+    background-color: var(--success);
+  }
+
+  &.warning {
+    background-color: var(--warning);
+  }
+}
+
+th, td {
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+th {
+  background: var(--table-header) !important;
+}
+
+tr {
+  height: auto !important;
+}
+
+tr:nth-child(even) {
+  background: var(--table-light) !important;
+  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+}
