@@ -1,11 +1,14 @@
 <div class="global-container">
   <div class="work-queue-container row gap-1">
-    <app-work-queue class="col-12 col-auto-lg h-100" />
+    <div class="h-auto col-12 col-auto-lg d-flex flex-column">
+      <app-work-queue class="h-100" />
+    </div>
     <div class="h-auto col-12 col-2-lg d-flex flex-column">
       <app-portfolio-goals class="h-100" />
     </div>
-    <div class="col-12 col-2-lg h-100">
-      <app-quick-actions class="col-12 col-2-lg h-100" />
+    <div class="col-12 col-2-lg h-auto d-flex flex-column gap-1">
+      <app-quick-actions class="h-100" />
+      <app-market-intelligence class="h-100" />
     </div>
   </div>
 </div>

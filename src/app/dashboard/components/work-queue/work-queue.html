@@ -1,7 +1,7 @@
 @if ({
   workQueueTableColumns: workQueueTableColumns$ | async,
 }; as extracted) {
-  <div class="card-container">
+  <div class="card-container h-100">
     <h2 class="card-title">Work Queue</h2>
     @if (extracted.workQueueTableColumns) {
       <div class="d-flex gap-1 align-items-center flex-wrap btn-container">

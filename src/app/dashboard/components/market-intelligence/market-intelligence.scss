@@ -1,0 +1,33 @@
+.news-item {
+  gap: 9px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  
+  p {
+    font-weight: 300;
+  }
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+}
+
+.point {
+  height: 16px;
+  min-height: 16px;
+  width: 16px;
+  min-width: 16px;
+  border-radius: 50%;
+
+  &.danger {
+    background-color: var(--danger);
+  }
+
+  &.warning {
+    background-color: var(--warning);
+  }
+
+  &.primary-dark {
+    background-color: var(--primary-dark);
+  }
+}
