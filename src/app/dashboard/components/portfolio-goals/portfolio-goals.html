@@ -1,0 +1,11 @@
+<div class="card-container">
+  <h2 class="card-title">Portfolio goals</h2>
+  <label class="progress-title">Portfolio loss ratio target</label>
+  <app-progress-bar-with-parts class="progress-bar" [target]="55" [current]="48.2" [change]="-6.8" />
+  <label class="progress-title">Renewal retention</label>
+  <app-progress-bar-with-parts class="progress-bar" [target]="70" [current]="70" [change]="0" />
+  <label class="progress-title">New business target</label>
+  <app-progress-gradient class="progress-bar" [actual]="8" [target]="12" actualText="$8M" targetText="$12M" />
+  <label class="progress-title">Annual gwp target</label>
+  <app-progress-gradient class="progress-bar" [actual]="28.4" [target]="42" actualText="$28.4M" targetText="$42M" />
+</div>

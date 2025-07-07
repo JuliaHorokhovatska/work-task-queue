@@ -1,0 +1,92 @@
+.performance-bar-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  padding: 30px 0;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.bar {
+  display: flex;
+  height: 25px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.bar-segment {
+  height: 100%;
+}
+
+.green {
+  background-color: var(--success);
+}
+
+.yellow {
+  background-color: var(--warning);
+}
+
+.red {
+  background-color: var(--danger);
+}
+
+.target-label,
+.current-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.target-label {
+  top: 4px;
+  color: var(--text-dark);
+  transform: translateX(-50%);
+}
+
+.current-label {
+  top: 37px;
+  color: var(--text-light);
+  transform: translateX(-20%);
+}
+
+.target-arrow,
+.current-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transform: translateX(-50%);
+}
+
+.target-arrow {
+  top: 18px;
+}
+
+.target-arrow {
+  border-top: 12px solid var(--primary);
+}
+
+.current-arrow {
+  border-bottom: 12px solid var(--success);
+  top: 55px;
+  transform: translateX(-50%);
+}
+
+.change-label {
+  position: absolute;
+  margin-top: 15px;
+  font-size: 10px;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.change-label.good {
+  color: var(--success);
+}
+
+.change-label.bad {
+  color: var(--danger);
+}

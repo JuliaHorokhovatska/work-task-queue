@@ -1,0 +1,17 @@
+<div class="performance-bar-container">
+  <div class="target-label" [style.left.%]="target()">TG:{{ target() }}%</div>
+  <div class="target-arrow" [style.left.%]="target()"></div>
+
+  <div class="bar">
+    <div class="bar-segment green" [style.width.%]="current()"></div>
+    <div class="bar-segment yellow" [style.width.%]="yellowWidth"></div>
+    <div class="bar-segment red" [style.width.%]="redWidth()"></div>
+
+    <div class="current-label" [style.left.%]="currentPosition()">{{ current() }}%</div>
+    <div class="current-arrow" [style.left.%]="currentPosition()"></div>
+  </div>
+
+  <div class="change-label" [class.good]="change() <= 0" [class.bad]="change() > 0" [style.left.%]="currentPosition()">
+    {{ change() < 0 ? change() + '%' + ' (GOOD)' : change() === 0 ? 'ON TARGET' : change() + '%' + ' (BAD)' }}
+  </div>
+</div>
