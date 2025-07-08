@@ -1,2 +1,4 @@
-<input [ngStyle]="{'height.px': height(), 'width.px': width()}" class="search-input text-light" type="text"
+<input 
+  [ngStyle]="{'height.px': height(), 'width.px': width(), 'background-color': background()}" 
+  class="search-input text-light" type="text"
   placeholder="Search" [formControl]="search">

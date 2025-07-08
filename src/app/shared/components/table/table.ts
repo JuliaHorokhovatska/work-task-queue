@@ -20,6 +20,7 @@ import {
 } from '../../models/models';
 import { IsObjectPipe } from '../../pipes/is-object-pipe';
 import { GetInitialsPipe } from '../../pipes/get-initials-pipe';
+import { Search } from '../search/search';
 
 @Component({
   selector: 'app-table',
@@ -31,6 +32,7 @@ import { GetInitialsPipe } from '../../pipes/get-initials-pipe';
     MatSortModule,
     IsObjectPipe,
     GetInitialsPipe,
+    Search,
   ],
   templateUrl: './table.html',
   styleUrl: './table.scss',
@@ -55,22 +57,30 @@ export class Table {
     effect(() => {
       if (this.dataSourceDetails()?.length) {
         this.matDataSource = new MatTableDataSource(this.dataSourceDetails());
+
+        this.matDataSource.filterPredicate = (
+          data,
+          filter: string
+        ): boolean => {
+          return Object.values(data).some((val: any) => {
+            const value =
+              typeof val?.data === 'object' && val?.data?.name
+                ? val.data.name
+                : val?.data ?? val;
+
+            return value?.toString().toLowerCase().includes(filter);
+          });
+        };
+
         if (this.sort) {
           this.matDataSource.sort = this.sort;
         }
       }
-    })
+    });
   }
 
-  applyFilter(event: Event) {
-    console.log(event);
-    // const filterValue = (event.target as HTMLInputElement).value;
-    // const dataSource = this.dataSource();
-    // dataSource.filter = filterValue.trim().toLowerCase();
-
-    // if (dataSource.paginator) {
-    //   dataSource.paginator.firstPage();
-    // }
+  applyFilter(value: string | null) {
+    this.matDataSource.filter = value?.trim().toLowerCase() || '';
   }
 
   onSortChange(event: { active: string; direction: 'asc' | 'desc' | '' }) {

@@ -81,10 +81,10 @@ export class WorkQueue implements OnInit {
                 name: item.status,
                 color:
                   item.status === WorkStatus.new
-                    ? 'primary'
+                    ? TextColor.primary
                     : item.status === WorkStatus.pending
-                    ? 'warning'
-                    : 'success',
+                    ? TextColor.warning
+                    : TextColor.success,
               },
               type: TableSourceType.status,
               textColor: TextColor.default,

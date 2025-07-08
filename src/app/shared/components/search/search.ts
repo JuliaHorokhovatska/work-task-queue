@@ -6,6 +6,7 @@ import {
   inject,
   input,
   OnInit,
+  output,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -22,6 +23,10 @@ export class Search implements OnInit {
   height = input<number>(48);
   width = input<number>(479);
 
+  background = input<string>();
+
+  searchChange = output<string | null>();
+
   search = new FormControl('');
 
   private destroyRef = inject(DestroyRef);
@@ -29,8 +34,6 @@ export class Search implements OnInit {
   ngOnInit(): void {
     this.search.valueChanges
       .pipe(takeUntilDestroyed(this.destroyRef), debounceTime(500))
-      .subscribe((value) => {
-        console.log(value);
-      });
+      .subscribe((value) => this.searchChange.emit(value));
   }
 }

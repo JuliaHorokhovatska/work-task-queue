@@ -1,0 +1,21 @@
+@if ({
+  accountsTableDetails: accountsTableDetails$ | async,
+  accountsTableColumns: accountsTableColumns$ | async
+}; as extracted) {
+<div class="card-container">
+  <app-table 
+    [displayedColumns]="extracted.accountsTableColumns ?? []" 
+    [dataSourceDetails]="extracted.accountsTableDetails ?? []" 
+    [showFilter]="true">
+    <h2 class="card-title">My accounts</h2>
+    <div class="buttons d-flex align-items-center gap-1">
+      <button class="btn btn-outline-primary" 
+        matTooltip="Use search bar for filtering data table"
+        matTooltipClass="tooltip" type="button">Filter</button>
+      <button class="btn btn-outline-primary"
+        matTooltip="Use column headers for sorting data table"
+        matTooltipClass="tooltip" type="button">Sort</button>
+    </div>
+  </app-table>
+</div>
+}
