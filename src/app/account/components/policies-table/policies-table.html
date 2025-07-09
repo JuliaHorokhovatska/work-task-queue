@@ -1,0 +1,21 @@
+@if ({
+  policiesTableDetails: policiesTableDetails$ | async,
+  policiesTableColumns: policiesTableColumns$ | async
+}; as extracted) {
+  <h2 class="policies-table-title-title text-light">Policies</h2>
+  <div class="card-container">
+    <app-table 
+      [displayedColumns]="extracted.policiesTableColumns ?? []" 
+      [dataSourceDetails]="extracted.policiesTableDetails ?? []" 
+      [showFilter]="true">
+      <div class="buttons d-flex align-items-center gap-1">
+        <button class="btn btn-outline-primary" 
+          matTooltip="Use search bar for filtering data table"
+          matTooltipClass="tooltip" type="button">Filter</button>
+        <button class="btn btn-outline-primary"
+          matTooltip="Use column headers for sorting data table"
+          matTooltipClass="tooltip" type="button">Sort</button>
+      </div>
+    </app-table>
+  </div>
+}

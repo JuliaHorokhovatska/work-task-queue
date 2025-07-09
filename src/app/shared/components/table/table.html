@@ -65,6 +65,17 @@
           @case (tableSourceType.strong) {
             {{ row[column.key] }}
           }
+          @case (tableSourceType.line) {
+            @if (row[column.key]?.data; as line) {
+              <div class="d-flex gap-0-5 align-items-center">
+                <svg class="btn-icon" width="24" height="24">
+                  <use [attr.xlink:href]="'#' + line.icon"></use>
+                </svg>
+                <span class="text-white">{{line.name}}</span>
+              </div>
+              <span class="text-dark">{{line.line}}</span>
+            }
+          }
         }
       </td>
     </ng-container>

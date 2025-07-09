@@ -103,4 +103,8 @@ tr:nth-child(even) {
   &.primary {
     color: var(--primary);
   }
+
+  &.danger {
+    color: var(--danger);
+  }
 }

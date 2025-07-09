@@ -7,7 +7,6 @@ import { Table } from '../../../shared/components/table/table';
 import { DataService } from '../../../shared/services/data';
 import {
   AccountStatus,
-  AccountWinnability,
   TableColumn,
   TableSourceDetails,
   TableSourceType,

@@ -6,6 +6,7 @@ import { Policies } from '../../components/policies/policies';
 import { AccountStatusCompliance } from '../../components/account-status-compliance/account-status-compliance';
 import { AccountDetails } from '../../components/account-details/account-details';
 import { Communication } from '../../components/communication/communication';
+import { PoliciesTable } from '../../components/policies-table/policies-table';
 
 @Component({
   selector: 'app-account',
@@ -16,6 +17,7 @@ import { Communication } from '../../components/communication/communication';
     AccountStatusCompliance,
     AccountDetails,
     Communication,
+    PoliciesTable
   ],
   templateUrl: './account.html',
   styleUrl: './account.scss',

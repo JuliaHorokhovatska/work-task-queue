@@ -81,9 +81,28 @@ export interface WinnabilityScore {
   }
 }
 
+export interface PoliciesDetails {
+  line: {
+    name: string;
+    line: string;
+    icon: string;
+  };
+  eff_date: string;
+  exp_date: string;
+  status: AccountStatus;
+  expiring_tech: string;
+  expiring_premium: string;
+  renewal_to_tech: string;
+  renewal_tech: string;
+  renewal_premium: string;
+  rate_change: number;
+  loss_ratio: string;
+}
+
 export enum AccountStatus {
   active = 'Active',
   underReview = 'Under Review',
+  pending = 'Pending',
 }
 
 export enum AccountWinnability {
@@ -107,5 +126,6 @@ export enum TableSourceType {
   label = 'label',
   labelBorder = 'label-border',
   user = 'user',
-  strong = 'strong'
+  strong = 'strong',
+  line = 'line'
 }
