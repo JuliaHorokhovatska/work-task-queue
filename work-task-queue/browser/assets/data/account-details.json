@@ -1,0 +1,250 @@
+{
+  "winnability": {
+    "title": "Winnability",
+    "overall_score": {
+      "percentage": 82,
+      "score": "Very Strong"
+    },
+    "historical_trend": {
+      "jan": 10,
+      "feb": 30,
+      "mar": 25,
+      "apr": 35,
+      "may": 40,
+      "jun": 28,
+      "jul": 50,
+      "aug": 55,
+      "sep": 53,
+      "oct": 70,
+      "nov": 75,
+      "dec": 90
+    },
+    "position": {
+      "your_score": 82,
+      "market_average": 68,
+      "top_competitor": 88
+    },
+    "increasing_winnability": {
+      "brokers": {
+        "value": 88,
+        "increase": 28
+      },
+      "history": {
+        "value": 70,
+        "increase": 22
+      },
+      "industry_growth": {
+        "value": 50,
+        "increase": 16
+      },
+      "opportunity": {
+        "value": 40,
+        "increase": 11
+      }
+    },
+    "descreasing_winnability": {
+      "brokers": {
+        "value": 78,
+        "decrease": 24
+      },
+      "history": {
+        "value": 70,
+        "decrease": 18
+      },
+      "industry_growth": {
+        "value": 50,
+        "decrease": 13
+      },
+      "opportunity": {
+        "value": 40,
+        "decrease": 5
+      }
+    }
+  },
+  "review": {
+    "title": "Exposure Review & Suggested Coverage",
+    "overall_score": {
+      "percentage": 68,
+      "score": "Strong"
+    },
+    "historical_trend": {
+      "jan": 5,
+      "feb": 22,
+      "mar": 25,
+      "apr": 35,
+      "may": 55,
+      "jun": 28,
+      "jul": 67,
+      "aug": 55,
+      "sep": 78,
+      "oct": 70,
+      "nov": 88,
+      "dec": 95
+    },
+    "position": {
+      "your_score": 77,
+      "market_average": 63,
+      "top_competitor": 80
+    },
+    "increasing_winnability": {
+      "brokers": {
+        "value": 75,
+        "increase": 20
+      },
+      "history": {
+        "value": 55,
+        "increase": 15
+      },
+      "industry_growth": {
+        "value": 45,
+        "increase": 10
+      },
+      "opportunity": {
+        "value": 30,
+        "increase": 17
+      }
+    },
+    "descreasing_winnability": {
+      "brokers": {
+        "value": 89,
+        "decrease": 19
+      },
+      "history": {
+        "value": 65,
+        "decrease": 12
+      },
+      "industry_growth": {
+        "value": 55,
+        "decrease": 15
+      },
+      "opportunity": {
+        "value": 35,
+        "decrease": 15
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio Strategy Alignment",
+    "overall_score": {
+      "percentage": 75,
+      "score": "Strong"
+    },
+    "historical_trend": {
+      "jan": 58,
+      "feb": 22,
+      "mar": 25,
+      "apr": 20,
+      "may": 55,
+      "jun": 54,
+      "jul": 67,
+      "aug": 55,
+      "sep": 69,
+      "oct": 70,
+      "nov": 90,
+      "dec": 95
+    },
+    "position": {
+      "your_score": 87,
+      "market_average": 73,
+      "top_competitor": 90
+    },
+    "increasing_winnability": {
+      "brokers": {
+        "value": 78,
+        "increase": 16
+      },
+      "history": {
+        "value": 65,
+        "increase": 12
+      },
+      "industry_growth": {
+        "value": 47,
+        "increase": 14
+      },
+      "opportunity": {
+        "value": 28,
+        "increase": 16
+      }
+    },
+    "descreasing_winnability": {
+      "brokers": {
+        "value": 95,
+        "decrease": 17
+      },
+      "history": {
+        "value": 84,
+        "decrease": 15
+      },
+      "industry_growth": {
+        "value": 75,
+        "decrease": 14
+      },
+      "opportunity": {
+        "value": 25,
+        "decrease": 19
+      }
+    }
+  },
+  "broker": {
+    "title": "Broker Analytics",
+    "overall_score": {
+      "percentage": 98,
+      "score": "Very Strong"
+    },
+    "historical_trend": {
+      "jan": 24,
+      "feb": 35,
+      "mar": 45,
+      "apr": 24,
+      "may": 55,
+      "jun": 57,
+      "jul": 67,
+      "aug": 35,
+      "sep": 69,
+      "oct": 70,
+      "nov": 80,
+      "dec": 90
+    },
+    "position": {
+      "your_score": 90,
+      "market_average": 78,
+      "top_competitor": 98
+    },
+    "increasing_winnability": {
+      "brokers": {
+        "value": 88,
+        "increase": 19
+      },
+      "history": {
+        "value": 78,
+        "increase": 18
+      },
+      "industry_growth": {
+        "value": 57,
+        "increase": 15
+      },
+      "opportunity": {
+        "value": 24,
+        "increase": 19
+      }
+    },
+    "descreasing_winnability": {
+      "brokers": {
+        "value": 93,
+        "decrease": 10
+      },
+      "history": {
+        "value": 76,
+        "decrease": 19
+      },
+      "industry_growth": {
+        "value": 65,
+        "decrease": 19
+      },
+      "opportunity": {
+        "value": 56,
+        "decrease": 10
+      }
+    }
+  }
+}
