@@ -1,0 +1,65 @@
+<h2 class="performance-metrics-title text-light">Performance Metrics</h2>
+<div class="performance-metrics-details d-flex flex-wrap flex-xl-nowrap">
+  <div class="w-100 row flex-xl-nowrap">
+    <div class="performance-metric-container col-12 col-4-lg">
+      <div class="card-container performance-metric d-flex flex-column justify-content-between">
+        <div>
+          <p class="performance-metric__title text-light text-w-300">Winnability</p>
+          <p class="performance-metric__value text-light text-w-300">
+            Very Strong
+          </p>
+        </div>
+        <a class="performance-metric__link text-primary text-w-400" href="">See all factors</a>
+      </div>
+    </div>
+
+    <div class="performance-metric-container col-12 col-4-lg">
+      <div class="card-container performance-metric d-flex flex-column justify-content-between">
+        <div>
+          <p class="performance-metric__title text-light text-w-300">Loss Ratio</p>
+          <p class="performance-metric__value text-light text-w-300">
+            25%
+            <span class="performance-metric__detail text-dark">vs 42% target</span>
+          </p>
+        </div>
+        <a class="performance-metric__link text-primary text-w-400" href="">View history</a>
+      </div>
+    </div>
+
+    <div class="performance-metric-container col-12 col-4-lg">
+      <div class="card-container performance-metric d-flex flex-column justify-content-between">
+        <div>
+          <p class="performance-metric__title text-light text-w-300">Premium Growth</p>
+          <p class="performance-metric__value text-light text-w-300">
+            12.4%
+            <span class="performance-metric__detail text-dark">YoY increase $123M vs $150M Target</span>
+          </p>
+        </div>
+        <a class="performance-metric__link text-primary text-w-400" href="">View trend</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-container performance-metric exposure-distribution w-100">
+    <p class="performance-metric__title text-light text-w-300">Exposure Distribution</p>
+    <div class="exposure-distribution__progresses d-flex flex-column">
+      <app-progress-gradient class="progress-bar" 
+        [actual]="71.4" 
+        [target]="100" 
+        [height]="22"
+        [showPercentage]="false" 
+        targetText="Marine Cargo: 71.4%" />
+      <app-progress-gradient class="progress-bar" 
+        [actual]="50" 
+        [target]="100" 
+        [height]="22"
+        [showPercentage]="false" 
+        targetText="General Liability: 20%" />
+      <app-progress-gradient class="progress-bar" 
+        [actual]="35" 
+        [target]="100" 
+        [height]="22"
+        [showPercentage]="false" 
+        targetText="Workers Comp: 8.6%" />
+    </div>
+  </div>
+</div>

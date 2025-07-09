@@ -1,0 +1,76 @@
+.performance-metrics-details {
+  gap: 17px;
+}
+
+.performance-metrics-title {
+  margin-top: 38px;
+  margin-bottom: 28px;
+}
+
+.performance-metric-container {
+  padding-right: 17px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.performance-metric {
+  width: 100%;
+  border-radius: 20px;
+  min-height: 240px;
+  max-width: 377px;
+  padding: 40px 25px 20px 25px;
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &__value {
+    margin-top: 20px;
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  &__detail {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &__link {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.exposure-distribution {
+  min-width: 470px;
+  height: min-content;
+  min-height: unset;
+
+  &__progresses {
+    margin-top: 10px;
+    gap: 13px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .performance-metric-container {
+    padding-right: 0;
+    padding-bottom: 17px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .performance-metric {
+      max-width: 100%;
+    }
+  }
+
+  .exposure-distribution {
+    max-width: 100%;
+  }
+}

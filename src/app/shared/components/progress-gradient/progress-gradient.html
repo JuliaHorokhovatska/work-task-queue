@@ -1,11 +1,13 @@
 <div class="progress-wrapper">
   <div class="d-flex align-items-center w-100">
-    <div class="progress-bar w-100">
+    <div class="progress-bar w-100" [ngStyle]="{'height.px': height(), 'width.px': width()}">
       <div class="progress-fill {{ progressColor() }}" [style.width.%]="percentage()">
         <div class="progress-value">{{actualText()}}</div>
       </div>
     </div>
     <div class="progress-max">{{targetText()}}</div>
   </div>
-  <div class="progress-percent">{{ percentage() }}%</div>
+  @if (showPercentage()) {
+    <div class="progress-percent">{{ percentage() }}%</div>
+  }
 </div>

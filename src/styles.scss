@@ -85,6 +85,10 @@ body {
     gap: 1rem;
   }
 
+  &.flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
   .col-2 {
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
@@ -291,4 +295,8 @@ h2 {
   color: var(--white);
   background-color: var(--background);
   border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, input, Signal } from '@angular/core';
 
 @Component({
   selector: 'app-progress-gradient',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './progress-gradient.html',
   styleUrl: './progress-gradient.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -13,6 +14,11 @@ export class ProgressGradient {
 
   actualText = input<string>();
   targetText = input<string>();
+
+  height = input<number>(25);
+  width = input<number>(200);
+
+  showPercentage = input<boolean>(true);
 
   progressColor = input<string>('primary');
 
