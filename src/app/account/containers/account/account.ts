@@ -5,6 +5,7 @@ import { PerformanceMetrics } from '../../components/performance-metrics/perform
 import { Policies } from '../../components/policies/policies';
 import { AccountStatusCompliance } from '../../components/account-status-compliance/account-status-compliance';
 import { AccountDetails } from '../../components/account-details/account-details';
+import { Communication } from '../../components/communication/communication';
 
 @Component({
   selector: 'app-account',
@@ -14,6 +15,7 @@ import { AccountDetails } from '../../components/account-details/account-details
     Policies,
     AccountStatusCompliance,
     AccountDetails,
+    Communication,
   ],
   templateUrl: './account.html',
   styleUrl: './account.scss',

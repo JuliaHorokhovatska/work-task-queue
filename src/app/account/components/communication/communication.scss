@@ -1,0 +1,75 @@
+.communication-title {
+  margin-top: 42px;
+  margin-bottom: 37px;
+}
+
+.communication {
+  margin-top: 40px;
+  gap: 15px;
+}
+
+.communication-primary {
+  gap: 17px;
+}
+
+.communication-container {
+  border-radius: 20px;
+  background-color: var(--table-header);
+
+  &.primary {
+    border: 1px solid var(--primary);
+  }
+
+  &__title {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    line-height: 20px;
+
+    &.m-0 {
+      margin: 0;
+    }
+  }
+
+  &__date {
+    margin: 15px 0;
+  }
+
+  &__date,
+  &__description {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__description {
+    margin: 0 0 10px 0;
+  }
+
+  .btn-primary {
+    margin-top: 8px;
+    width: 120px;
+  }
+}
+
+.communication-label {
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: var(--text-light);
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  width: min-content;
+  text-wrap: nowrap;
+
+  .btn-icon {
+    nav-right: 12px;
+  }
+
+  &.dark-primary {
+    background-color: var(--primary-dark);
+  }
+
+  &.success {
+    background-color: var(--success);
+  }
+}
