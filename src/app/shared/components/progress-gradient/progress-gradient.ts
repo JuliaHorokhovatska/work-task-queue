@@ -18,6 +18,7 @@ export class ProgressGradient {
   height = input<number>(25);
   width = input<number>(200);
 
+  showBackground = input<boolean>(true);
   showPercentage = input<boolean>(true);
 
   progressColor = input<string>('primary');

@@ -104,17 +104,7 @@ export class MyAccounts implements OnInit {
               textColor: TextColor.primary,
             },
             winnability: {
-              data: {
-                name: item.winnability,
-                points:
-                  item.winnability === AccountWinnability.veryStrong
-                    ? Array(4)
-                    : item.winnability === AccountWinnability.strong
-                    ? Array(3)
-                    : item.winnability === AccountWinnability.medium
-                    ? Array(2)
-                    : Array(1),
-              },
+              data: item.winnability,
               type: TableSourceType.strong,
               textColor: TextColor.primary,
             },

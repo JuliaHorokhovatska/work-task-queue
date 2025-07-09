@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { AccountDetails, WorkQueue } from '../models/models';
+import { AccountDetails, AccountStatistics, WorkQueue } from '../models/models';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +17,9 @@ export class DataService {
 
   getAccounts(): Observable<any[]> {
     return this.http.get<AccountDetails[]>('assets/data/accounts.json');
+  }
+
+  getAccountDetails(): Observable<AccountStatistics> {
+    return this.http.get<AccountStatistics>('assets/data/account-details.json');
   }
 }

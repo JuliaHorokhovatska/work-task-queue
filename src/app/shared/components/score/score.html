@@ -1,0 +1,8 @@
+<div class="score d-flex align-items-center">
+  <div class="score-points d-flex align-items-center">
+    @for (item of scoreWithPointArray().points; track $index; let i = $index) {
+      <div class="score-point"></div>
+    }
+  </div>
+  <label>{{scoreWithPointArray().name}}</label>
+</div>

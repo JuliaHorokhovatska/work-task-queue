@@ -47,6 +47,40 @@ export interface AccountDetails {
   winnability: string;
 }
 
+export interface AccountStatistics {
+  winnability: AccountStatistic;
+  review: AccountStatistic;
+  portfolio: AccountStatistic;
+  broker: AccountStatistic;
+}
+
+export interface AccountStatistic {
+  title: string;
+  overall_score: OverallScore;
+  historical_trend: Record<string, number>;
+  position: PositionScore;
+  increasing_winnability: WinnabilityScore;
+  descreasing_winnability: WinnabilityScore;
+}
+
+export interface OverallScore {
+  percentage: number;
+  score: AccountWinnability;
+}
+
+export interface PositionScore {
+  your_score: number;
+  market_average: number;
+  top_competitor: number;
+}
+
+export interface WinnabilityScore {
+  [key: string]: {
+    value: number;
+    increase: number;
+  }
+}
+
 export enum AccountStatus {
   active = 'Active',
   underReview = 'Under Review',

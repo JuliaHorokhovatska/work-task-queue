@@ -1,0 +1,220 @@
+.account-details-menu {
+  min-width: 323px;
+  width: 323px;
+  padding-right: 22px;
+  border-right: 1px dashed #8A8B98;
+}
+
+.account-details-menu-section {
+  padding: 23px 30px;
+  border-radius: 10px;
+
+  &.opened {
+    background-color: var(--table-header);
+
+    .account-details-menu-section__count {
+      border: 1px solid var(--text-light);
+    }
+
+    .account-details-menu-section__content {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+
+  &__header {
+    border: none;
+    background-color: transparent;
+    text-align: start;
+    cursor: pointer;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &__count {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: var(--table-header);
+  }
+
+  &__content {
+    gap: 30px;
+    margin-top: 20px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, opacity .3s ease;
+  }
+
+  &__line {
+    border: none;
+    background-color: transparent;
+    margin-left: 23px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: start;
+    cursor: pointer;
+
+    &.active {
+      color: var(--primary);
+    }
+  }
+}
+
+.account-details-content {
+  padding-left: 30px;
+
+  &__title {
+    font-size: 50px;
+    line-height: 52px;
+    margin-bottom: 20px;
+  }
+}
+
+.account-items {
+  gap: 8px;
+}
+
+.account-item,
+.progress-statistic,
+.recommendations {
+  background-color: var(--table-header);
+  border-radius: 20px;
+}
+
+.account-item {
+  min-width: 359px;
+  position: relative;
+
+  &__title {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 24px 0;
+  }
+
+  &__value {
+    font-size: 38px;
+    line-height: 40px;
+    margin-right: 9px;
+  }
+
+  &__chart {
+    position: absolute;
+    top: 30px;
+  }
+
+  &__progresses {
+    gap: 5px;
+  }
+}
+
+.progress-statistics {
+  gap: 8px;
+}
+
+.progress-statistic {
+  margin-top: 24px;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 0 0 12px;
+  }
+}
+
+.statistic-progress {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__number {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 43px;
+    min-width: 43px;
+    height: 43px;
+    min-height: 43px;
+    margin-right: 10px;
+
+    &.success {
+      border: 1px solid var(--success);
+      color: var(--success);
+    }
+
+    &.warning {
+      border: 1px solid var(--warning);
+      color: var(--warning);
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 3px 0;
+  }
+}
+
+.recommendations {
+  margin-top: 24px;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--success);
+    margin: 0 0 0 12px;
+  }
+}
+
+.recommendation {
+  &__title {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .account-details-main-container {
+    padding: 10px;
+  }
+
+  .account-details-menu {
+    width: 100%;
+    border: none;
+    padding: 10px;
+  }
+
+  .account-details-content {
+    padding: 0;
+
+    &__title {
+      font-size: 30px;
+      line-height: 32px;
+      margin-top: 20px;
+    }
+  }
+
+  .account-item {
+    min-width: 100%;
+    min-height: 130px;
+  }
+}

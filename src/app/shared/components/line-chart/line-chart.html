@@ -1,0 +1,20 @@
+<svg [attr.width]="width()" [attr.height]="height()" [attr.viewBox]="viewBox" class="line-chart">
+  <!-- Line -->
+  @if(animateKey()) {
+    <path [attr.d]="pathD" class="chart-line" />
+  }
+
+  <!-- Points -->
+  <!-- @for (point of points; track $index; let i = $index) {
+  <circle [attr.cx]="point.x" [attr.cy]="point.y" r="4" class="chart-point" />
+  } -->
+
+  <!-- Labels -->
+  @if (dataLine().labels; as labels) {
+    @for (label of labels; track $index; let i = $index) {
+      <text [attr.x]="points[i]?.x" [attr.y]="height() - 10" text-anchor="middle" class="chart-label">
+        {{ label }}
+      </text>
+    }
+  }
+</svg>

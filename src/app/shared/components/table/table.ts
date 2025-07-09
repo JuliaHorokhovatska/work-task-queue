@@ -21,6 +21,7 @@ import {
 import { IsObjectPipe } from '../../pipes/is-object-pipe';
 import { GetInitialsPipe } from '../../pipes/get-initials-pipe';
 import { Search } from '../search/search';
+import { Score } from '../score/score';
 
 @Component({
   selector: 'app-table',
@@ -33,6 +34,7 @@ import { Search } from '../search/search';
     IsObjectPipe,
     GetInitialsPipe,
     Search,
+    Score,
   ],
   templateUrl: './table.html',
   styleUrl: './table.scss',

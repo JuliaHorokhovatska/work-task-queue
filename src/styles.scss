@@ -45,6 +45,12 @@ body {
     }
   }
 
+  &.flex-xxl-nowrap {
+    @media (min-width: 1400px) {
+      flex-wrap: nowrap;
+    }
+  }
+
   &.flex-row-lg {
     @media (min-width: 992px) {
       flex-direction: row;
@@ -279,6 +285,15 @@ h2 {
     &:hover {
       color: var(--white);
     }
+  }
+
+  &.btn-apply {
+    height: 58px;
+    min-width: 177px;
+    padding: 22px 60px;
+    color: var(--text-black);
+    background-color: var(--success);
+    border-radius: 30px;
   }
 }
 

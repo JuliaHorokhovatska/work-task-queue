@@ -8,24 +8,38 @@
 
 .progress-bar {
   position: relative;
-  background-color: var(--progress-background);
   height: 25px;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   overflow: hidden;
+  transition: width 0.4s ease;
+
+  &.background {
+    background-color: var(--progress-background);
+  }
 }
 
 .progress-fill {
   height: 100%;
+  width: 0;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 10px;
+  transition: width 0.4s ease;
 
   &.primary {
     background: linear-gradient(90deg, #313853 0%, #3B82F6 100%);
+  }
+
+  &.success {
+    background: linear-gradient(to right, rgba(59, 185, 121, 0) 0%, rgba(59, 185, 121, 1) 100%);
+  }
+
+  &.warning {
+    background: linear-gradient(to right, rgba(253, 210, 97, 0) 0%, rgba(253, 210, 97, 1) 100%);
   }
 }
 

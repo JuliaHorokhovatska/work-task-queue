@@ -49,14 +49,7 @@
           }
           @case (tableSourceType.strong) {
             @if (row[column.key]; as label) {
-              <div class="table-label table-label-border d-flex align-items-center {{label?.textColor}}">
-                <div class="table-label-points d-flex align-items-center">
-                  @for (item of label?.data?.points; track $index; let i = $index) {
-                    <div class="label-point {{label?.textColor}}"></div>
-                  }
-                </div>
-                <label>{{label?.data?.name}}</label>
-              </div>
+              <app-score [score]="label.data" />
             }
           }
           @case (tableSourceType.user) {
