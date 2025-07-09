@@ -1,6 +1,24 @@
 # WorkTaskQueue
 
+**Live App**: [https://work-task-queue.web.app/](https://work-task-queue.web.app/) 
+
+All components and layouts were **manually implemented** without using any AI-based design-to-code tools.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Framework**: Angular 20
+- **UI Library**: Angular Material
+- **Routing**: Angular Router
+- **Reactive Programming**: RxJS
+- **Build Tool**: Angular CLI
+- **Deployment**:
+  - Firebase Hosting
+
+---
 
 ## Development server
 
