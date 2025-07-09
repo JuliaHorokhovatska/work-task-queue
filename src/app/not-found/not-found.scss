@@ -1,0 +1,9 @@
+.not-found {
+  padding-top: 200px;
+}
+
+@media screen and (max-width: 992px) {
+  .not-found {
+    padding-top: 100px;
+  }
+}

@@ -50,4 +50,11 @@ export const routes: Routes = [
         (m) => m.UnderDevelopment
       ),
   },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./not-found/not-found').then(
+        (m) => m.NotFound
+      ),
+  },
 ];
