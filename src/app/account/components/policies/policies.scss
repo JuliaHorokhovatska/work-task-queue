@@ -1,0 +1,35 @@
+.policies-title {
+  margin-top: 82px;
+  margin-bottom: 20px;
+}
+
+.policies {
+  gap: 17px;
+  overflow-x: auto;
+}
+
+.policie {
+  min-height: 135px;
+  width: 331px;
+  background-color: var(--table-header);
+  border-radius: 30px;
+  padding: 25px 30px;
+  gap: 12px;
+
+  &__title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-left: 12px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .policie {
+    width: 100%;
+  }
+}
