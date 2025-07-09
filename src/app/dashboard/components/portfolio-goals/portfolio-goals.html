@@ -5,7 +5,9 @@
   <label class="progress-title">Renewal retention</label>
   <app-progress-bar-with-parts class="progress-bar" [target]="70" [current]="70" [change]="0" />
   <label class="progress-title">New business target</label>
-  <app-progress-gradient class="progress-bar" [actual]="8" [target]="12" actualText="$8M" targetText="$12M" />
+  <app-progress-gradient class="progress-bar" [actual]="8" [target]="12" [progressVisible]="progressVisible()"
+    actualText="$8M" targetText="$12M" />
   <label class="progress-title">Annual gwp target</label>
-  <app-progress-gradient class="progress-bar" [actual]="28.4" [target]="42" actualText="$28.4M" targetText="$42M" />
+  <app-progress-gradient class="progress-bar" [actual]="28.4" [target]="42" [progressVisible]="progressVisible()"
+    actualText="$28.4M" targetText="$42M" />
 </div>

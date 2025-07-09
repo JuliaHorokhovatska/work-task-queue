@@ -1,12 +1,14 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  effect,
+  input,
   OnInit,
   signal,
   WritableSignal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { filter, map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { DataService } from '../../../shared/services/data';
 import { AccountStatistics } from '../../../shared/models/models';
@@ -30,12 +32,22 @@ enum MenuItem {
 
 @Component({
   selector: 'app-account-details',
-  imports: [CommonModule, Score, LineChart, ProgressGradient, CalculateProgressWidthPipe],
+  imports: [
+    CommonModule,
+    Score,
+    LineChart,
+    ProgressGradient,
+    CalculateProgressWidthPipe,
+  ],
   templateUrl: './account-details.html',
   styleUrl: './account-details.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AccountDetails implements OnInit {
+  visible = input.required<boolean>();
+
+  progressVisible: WritableSignal<boolean> = signal<boolean>(false);
+
   accountDetails$!: Observable<AccountStatistics>;
 
   selectedMenuItem: WritableSignal<{
@@ -49,7 +61,15 @@ export class AccountDetails implements OnInit {
   public readonly menuSections = MenuSections;
   public readonly menuItem = MenuItem;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) {
+    effect(() => {
+      if (this.visible()) {
+        setTimeout(() => {
+          this.progressVisible.set(true);
+        }, 800);
+      }
+    });
+  }
 
   ngOnInit() {
     this.accountDetails$ = this.dataService.getAccountDetails();
@@ -59,10 +79,7 @@ export class AccountDetails implements OnInit {
     this.selectedMenuItem.set({ section, item: MenuItem.winnability });
   }
 
-  setItem(value: {
-    section: MenuSections;
-    item: MenuItem;
-  }) {
+  setItem(value: { section: MenuSections; item: MenuItem }) {
     this.selectedMenuItem.set(value);
   }
 }

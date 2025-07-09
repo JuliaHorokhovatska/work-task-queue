@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal, WritableSignal } from '@angular/core';
 
 import { ProgressGradient } from '../../../shared/components/progress-gradient/progress-gradient';
 
@@ -9,4 +9,12 @@ import { ProgressGradient } from '../../../shared/components/progress-gradient/p
   styleUrl: './performance-metrics.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PerformanceMetrics {}
+export class PerformanceMetrics implements OnInit {
+  progressVisible: WritableSignal<boolean> = signal<boolean>(false);
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.progressVisible.set(true);
+    }, 200)
+  }
+}

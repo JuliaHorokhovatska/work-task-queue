@@ -3,7 +3,7 @@
     <div class="progress-bar w-100" 
       [ngStyle]="{'height.px': height(), 'width.px': width()}" 
       [class.background]="showBackground()">
-      <div class="progress-fill {{ progressColor() }}" [style.width.%]="percentage()">
+      <div class="progress-fill {{ progressColor() }}" [style.width.%]="progressVisible() ? percentage() : 0">
         <div class="progress-value">{{actualText()}}</div>
       </div>
     </div>

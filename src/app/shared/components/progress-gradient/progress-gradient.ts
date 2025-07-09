@@ -23,5 +23,7 @@ export class ProgressGradient {
 
   progressColor = input<string>('primary');
 
+  progressVisible = input<boolean>(false);
+
   percentage: Signal<number> = computed(() => Math.round((this.actual() / this.target()) * 100));
 }

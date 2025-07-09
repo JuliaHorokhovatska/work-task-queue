@@ -1,9 +1,23 @@
 <div class="global-container">
   <app-general-info />
   <app-performance-metrics />
-  <app-policies />
-  <app-account-status-compliance />
-  <app-account-details />
-  <app-communication />
+  <div class="slide-up-down" [ngClass]="visibleElements()[elements.policies] ? 'visible' : 'hidden'" appIntersection
+    [threshold]="[threshold()]" (visible)="onVisible($event, elements.policies)">
+    <app-policies />
+  </div>
+  <div class="slide-up-down" [ngClass]="visibleElements()[elements.accountStatusCompliance] ? 'visible' : 'hidden'"
+    appIntersection [threshold]="[threshold()]" (visible)="onVisible($event, elements.accountStatusCompliance)">
+    <app-account-status-compliance />
+  </div>
+  <div class="slide-up-down" [ngClass]="visibleElements()[elements.accountDetails] ? 'visible' : 'hidden'"
+    appIntersection [threshold]="[0.1]" [rootMargin]="rootMargin()"
+    (visible)="onVisible($event, elements.accountDetails)">
+    <app-account-details [visible]="visibleElements()[elements.accountDetails]" />
+  </div>
+  <div class="slide-up-down" [ngClass]="visibleElements()[elements.communication] ? 'visible' : 'hidden'"
+    appIntersection [threshold]="[0.1]" [rootMargin]="rootMargin()"
+    (visible)="onVisible($event, elements.communication)">
+    <app-communication />
+  </div>
   <app-policies-table />
 </div>
