@@ -74,6 +74,10 @@ body {
   &.justify-content-between {
     justify-content: space-between;
   }
+
+  &.justify-content-evenly {
+    justify-content: space-evenly;
+  }
 }
 
 .row {
@@ -104,6 +108,11 @@ body {
     max-width: 33.333333%;
   }
 
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
   .col-12 {
     flex: 0 0 100%;
     max-width: 100%;
@@ -129,6 +138,11 @@ body {
     .col-4-lg {
       flex: 0 0 33.333333%;
       max-width: 33.333333%;
+    }
+
+    .col-6-lg {
+      flex: 0 0 50%;
+      max-width: 50%;
     }
   }
 }
