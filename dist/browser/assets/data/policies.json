@@ -1,0 +1,70 @@
+[
+  {
+    "line": {
+      "name": "Marine Cargo",
+      "line": "17030212",
+      "icon": "boat-primary"
+    },
+    "eff_date": "6/30/2026",
+    "exp_date": "6/30/2027",
+    "status": "Active",
+    "expiring_tech": "$587,500",
+    "expiring_premium": "$605,000",
+    "renewal_to_tech": "$610,000",
+    "renewal_tech": "$620,000",
+    "renewal_premium": "$625,000",
+    "rate_change": 3.3,
+    "loss_ratio": "32%"
+  },
+  {
+    "line": {
+      "name": "General Liability",
+      "line": "4631092",
+      "icon": "secure-success"
+    },
+    "eff_date": "6/30/2026",
+    "exp_date": "6/30/2027",
+    "status": "Active",
+    "expiring_tech": "$160,500",
+    "expiring_premium": "$165,000",
+    "renewal_to_tech": "$170,000",
+    "renewal_tech": "$172,500",
+    "renewal_premium": "$175,000",
+    "rate_change": 6.1,
+    "loss_ratio": "55%"
+  },
+  {
+    "line": {
+      "name": "Workers Comp",
+      "line": "9182371",
+      "icon": "secure-purple"
+    },
+    "eff_date": "Pending",
+    "exp_date": "Pending",
+    "status": "Pending",
+    "expiring_tech": "$0",
+    "expiring_premium": "$0",
+    "renewal_to_tech": "$73,500",
+    "renewal_tech": "$75,000",
+    "renewal_premium": "$75,000",
+    "rate_change": null,
+    "loss_ratio": null
+  },
+  {
+    "line": {
+      "name": "Umbrella",
+      "line": "5274936",
+      "icon": "secure-red"
+    },
+    "eff_date": "13/03/2026",
+    "exp_date": "13/03/2027",
+    "status": "Active",
+    "expiring_tech": "$245,000",
+    "expiring_premium": "$250,000",
+    "renewal_to_tech": "$267,500",
+    "renewal_tech": "$270,000",
+    "renewal_premium": "$275,000",
+    "rate_change": 10,
+    "loss_ratio": "78%"
+  }
+]

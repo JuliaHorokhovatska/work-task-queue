@@ -1,13 +1,16 @@
 {
   "name": "work-task-queue",
   "version": "0.0.0",
+  "homepage": "https://JuliaHorokhovatska.github.io/work-task-queue",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --output-path dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "make-sprite": "gulp svgSprite"
+    "make-sprite": "gulp svgSprite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "prettier": {
     "overrides": [
@@ -38,6 +41,7 @@
     "@angular/cli": "^20.0.5",
     "@angular/compiler-cli": "^20.0.0",
     "@types/jasmine": "~5.1.0",
+    "gh-pages": "^6.3.0",
     "gulp": "^5.0.1",
     "gulp-purifycss": "^0.2.0",
     "gulp-rev": "^11.0.0",
